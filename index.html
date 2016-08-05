@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="clock">
+			<img id="secondHand" src="images/sec.png">
+			<img id="minuteHand" src="images/min.png">
+			<img id="hourHand" src="images/hour.png">
+		</div>
+		
+		<script>
+			
+//RUNNING FUNCTIONS FOR THE FIRST TIME
+			
+			secondHand();
+			minuteHand();
+			hourHand();
+			
+//SETTING UP FUNCTIONS
+			
+			function secondHand(){
+				d=new Date();
+				sec=d.getSeconds();
+				
+				degree=(sec-30)*6;
+				document.getElementById("secondHand").style.transform="rotateZ("+degree+"deg)";}
+			
+			function minuteHand(){
+				d=new Date();
+				min=d.getMinutes();
+				
+				degree=(min-30)*6;
+				
+				document.getElementById("minuteHand").style.transform="rotateZ("+degree+"deg)";}
+			
+			function hourHand(){
+				d=new Date();
+				hour=d.getHours();
+				console.log(hour+" "+min);
+				if(hour>12){hour=hour-12};
+				
+				degree=180+(hour*30)+Math.floor(min/12)*6
+					
+				document.getElementById("hourHand").style.transform="rotateZ("+degree+"deg)";}
+			
+//RUNNING FUNCTIONS
+			
+			setInterval(secondHand,1000);
+			setInterval(minuteHand,60000);
+			setInterval(hourHand,720000);
+
+		</script>
+	</body>
+</html>

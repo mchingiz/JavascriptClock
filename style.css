@@ -1,0 +1,39 @@
+#clock {
+  width: 500px;
+  background-image: url("images/bg2.png");
+  background-size: cover;
+  height: 500px;
+  border-radius: 100%;
+  border: 1px solid black;
+  position: relative;
+  padding: 10px;
+  color: lightgray; }
+  #clock span {
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold; }
+  #clock #secondHand {
+    position: absolute;
+    height: 230px;
+    top: 260px;
+    left: 258px;
+    transform-origin: 2px 0px; }
+  #clock #minuteHand {
+    position: absolute;
+    height: 240px;
+    top: 260px;
+    left: 258px;
+    transform-origin: 2px 0px; }
+  #clock #hourHand {
+    position: absolute;
+    height: 200px;
+    top: 260px;
+    left: 258px;
+    transform-origin: 2px 0px; }
+
+/*@keyframes centerTest{
+	from{transform: rotateZ(0deg)};
+	to{transform: rotateZ(360deg)};
+}*/
+
+/*# sourceMappingURL=style.css.map */
